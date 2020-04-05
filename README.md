@@ -10,19 +10,21 @@ The basics have been built out for you, but you'll need to figure out the relati
 
 Here's what we need to be able to do.
 
+CarOwners -{Cars}- Mechanic
+
 **CarOwner**
 
-  - `CarOwner.all` Get a list of all owners
+  - `CarOwner.all` Get a list of all owners ~
 
-  - `CarOwner#cars` Get a list of all the cars that a specific owner has
-
-  - `CarOwner#mechanics` Get a list of all the mechanics that a specific owner goes to
-
-  - `CarOwner.average_number_of_cars` Get the average amount of cars owned for all owners
+  - `CarOwner#cars` Get a list of all the cars that a specific owner has ~
+    CarOwner has many Cars
+  - `CarOwner#mechanics` Get a list of all the mechanics that a specific owner goes to ~
+    #CarOwner has many mechanics
+  - `CarOwner.average_number_of_cars` Get the average amount of cars owned for all owners ~
 
 **Car**
 
-  - `Car.all` Get a list of all cars
+  - `Car.all` Get a list of all cars ~
 
   - `Car.classifications` Get a list of all car classifications
 
@@ -30,10 +32,10 @@ Here's what we need to be able to do.
 
 **Mechanic**
 
-  - `Mechanic.all` Get a list of all mechanics
+  - `Mechanic.all` Get a list of all mechanics ~
 
-  - `Mechanic#cars` Get a list of all cars that a mechanic services
-
-  - `Mechanic#car_owners` Get a list of all the car owners that go to a specific mechanic
-
-  - `Mechanic#car_owners_names` Get a list of the names of all car owners who go to a specific mechanic
+  - `Mechanic#cars` Get a list of all cars that a mechanic services ~
+    #Mechanic has many cars
+  - `Mechanic#car_owners` Get a list of all the car owners that go to a specific mechanic ~
+    #Mechanic has many CarOwners 
+  - `Mechanic#car_owners_names` Get a list of the names of all car owners who go to a specific mechanic ~
